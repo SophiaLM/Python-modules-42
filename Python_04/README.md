@@ -1,11 +1,11 @@
-#RAII:
+# RAII:
 
 El concepto de RAII (Resource Acquisition Is Initialization) es el corazón
 de la seguridad en sistemas críticos.Aunque RAII nació en C++, en Python 
 aplicamos la misma filosofía, pero de una forma mucho más "limpia" gracias
 a una estructura que ya conoces bien: el Context Manager (la sentencia with).
 
-#1. El Problema: El "Olvido" del Archivista
+# 1. El Problema: El "Olvido" del Archivista
 En el vídeo mencionan que el problema principal es la limpieza explícita. 
 En Python, si abres un archivo o una conexión a una base de datos y olvidas
 cerrarla, el recurso se queda "colgado".
