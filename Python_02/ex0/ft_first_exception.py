@@ -1,34 +1,29 @@
 #!/usr/bin/env python3
 
-def check_temperature(temp_str: str) -> int | None:
+def input_temperature(temp_str: str) -> int | None:
     """
     Check the temperature and catch the error
-    arg: temp_str → user's temperature
     """
     try:
-        print(f"\nTesting temperature: {temp_str}")
+        print(f"\nInput data is: {temp_str}")
         temp = int(temp_str)
     except ValueError:
-        print(f"Error: '{temp_str}' is not a valid number")
+        print(f"Caught input_temperature error: "
+              f"invalid literal for int() with base 10: {temp_str}")
         return None
 
-    if temp < 0:
-        raise ValueError(f"Error: {temp}°c is too cold! (min 0°c)")
-    elif temp > 40:
-        raise ValueError(f"Error: {temp}°c is too hot for plants! (max 40°c)")
-    else:
-        print(f"Temperature {temp}°c is perfect for plants!")
-        return (temp)
+    print(f"Temperature is now {temp}°c")
+    return (temp)
 
 
-def test_temperature_input():
+def test_temperature() -> None:
     """
     Test different temperatures or posibily errors
     """
-    print("=== Garden Temperature Checker ===")
-    for value in ["25", "abc", "100", "-50"]:
+    print("=== Garden Temperature ===")
+    for value in ["25", "abc"]:
         try:
-            check_temperature(value)
+            input_temperature(value)
         except ValueError as error:
             print(error)
     print("\nAll tests completed - program didn't crash!")
