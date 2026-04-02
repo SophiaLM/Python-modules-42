@@ -42,7 +42,8 @@ if __name__ == "__main__":
 
     if len(sys.argv) > 2:
         score = validate_arg()
-        score_analitics(score)
+        if score is not None:
+            score_analitics(score)
     else:
         print("No scores provided. Usage: python3 "
               "ft_score_analytics.py <score1> <score2> ...")

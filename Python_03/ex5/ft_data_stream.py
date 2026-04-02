@@ -61,7 +61,7 @@ if __name__ == "__main__":
           "\nProcessing 1000 game events...\n")
 
     events = generate_events()
-    for i in range(0, 5):
+    for i in range(0, 100):
         event = next(events)
         name = event["player"]
         lvl = event["level"]

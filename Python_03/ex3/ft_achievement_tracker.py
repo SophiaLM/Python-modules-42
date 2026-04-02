@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def achievement_analitics(sophy: set, ali: set, juan: set) -> tuple:
+def get_players_achievements(sophy: set, ali: set, juan: set) -> tuple:
     """
     Perform set operations to analyze player achievements.
     arg: sophy, ali, juan → sets of achievements
@@ -31,7 +31,7 @@ def display_results(sophy: set, ali: set, juan: set) -> None:
     print(f"Player ali achievements: {ali}")
     print(f"Player juan achievements: {juan}\n")
 
-    all_ach, common, rare = achievement_analitics(sophy, ali, juan)
+    all_ach, common, rare = get_players_achievements(sophy, ali, juan)
 
     print("=== Achievement Analitics ===")
     print(f"All unique achievements: {all_ach}")
